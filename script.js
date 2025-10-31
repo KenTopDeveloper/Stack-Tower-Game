@@ -55,7 +55,7 @@ class Stage {
 class Block {
     constructor(block) {
         this.STATES = {ACTIVE: 'active', STOPPED: 'stopped', MISSED: 'missed'};
-        this.MOVE_AMOUNT = 12; //Move_Amount
+        this.MOVE_AMOUNT = 12; //move_amount
         this.dimension = { width: 0, height: 0, depth: 0 };
         this.position = { x: 0, y: 0, z: 0 };
         this.targetBlock = block;
@@ -79,7 +79,7 @@ class Block {
             this.color = new THREE.Color(r / 255, g / 255, b / 255);
 		}
         this.state = this.index > 1 ? this.STATES.ACTIVE : this.STATES.STOPPED;
-        this.speed = -0.1 - (this.index * 0.005); //Speed
+        this.speed = -0.1 - (this.index * 0.005); //speed
         this.speed = Math.max(this.speed, -5);
         this.direction = this.speed;
         let geometry = new THREE.BoxGeometry(this.dimension.width, this.dimension.height, this.dimension.depth);
